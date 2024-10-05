@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #7b4646;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #80933e;
+    color: #a93874;
+    padding: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+nav {
+    position:relative; /* Necesario para posicionar el menú */
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu > li {
+    position: relative; /*Para el menú desplegable */
+    display: inline-block;  /*Para alinearlos en una fila*/
+    margin: 0 15px;
+}
+
+.menu > li > a {
+    color:#ffffff;
+    text-decoration:none;
+    padding: 10px 15px;
+    transition: background 0.3s, color 0.3s; /* Transiciones suaves */
+}
+
+.menu > li:hover > a {
+    background: #534caf; /* Fondo al pasar el ratón */
+    color: #ffffff; /* Color del texto */
+    border-radius: 5px; /* Esquinas redondeadas */
+}
+
+.dropdown {
+    display: none; /* Ocultar el menú desplegable */
+    position: absolute; /* Para posicionarlo */
+    background: #95af4c; /* Color del menú desplegable */
+    min-width: 150px; /* Ancho mínimo */
+    z-index: 1; /* Asegura que el menú esté por encima */
+    border-radius: 5px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.menu > li:hover .dropdown {
+    display: block; /* Mostrar al pasar el ratón */
+}
+
+.dropdown li {
+    display: block; /* Mostrar elementos en bloque */
+}
+
+.dropdown li a {
+    padding: 10px; /* Espaciado interno */
+    color:white; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.dropdown li a:hover {
+    background:greenyellow; /* Fondo al pasar el ratón sobre los elementos del menú */
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin: 20px 0;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
